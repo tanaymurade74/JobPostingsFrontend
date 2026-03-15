@@ -8,55 +8,6 @@ const AddJob = () => {
     const {handleAddJob, title, setTitle, companyName, setCompanyName, location, setLocation
     , salary, setSalary, jobType, setJobType, description, setDescription, qualification, setQualification} = useAddJobContext();
 
-//     const navigate = useNavigate();
-
-//   const [title, setTitle] = useState("");
-//   const [companyName, setCompanyName] = useState("");
-//   const [location, setLocation] = useState("");
-//   const [salary, setSalary] = useState(0);
-//   const [jobType, setJobType] = useState("Full Time (OnSite)");
-//   const [description, setDescription] = useState("");
-//   const [qualification, setQualification] = useState("");
-
-//   const handleAddJob = async (e) => {
-//     e.preventDefault();
-
-//     const payload = {
-//         jobTitle: title,
-//         companyName,
-//         location,
-//         salary,
-//         jobType,
-//         jobDescription: description,
-//         qualifications: qualification
-
-//     }
-//     console.log(payload)
-
-//     try{
-//         const response = await fetch("http://localhost:3000/jobs", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type" : "application/json"
-//             },
-//             body: JSON.stringify(payload)
-//         })
-
-//         if(!response.ok){
-//             throw new Error ("Unable to add Job")
-//         }
-
-//         const data = await response.json();
-
-//         console.log(data);
-//         navigate("/jobs"); 
-        
-//     }catch(error){
-//         console.error("Submission failed:", error);
-//         alert("Failed to add job");
-
-//     }
-//   };
 
   return (
     <div className="d-flex flex-column min-vh-100">

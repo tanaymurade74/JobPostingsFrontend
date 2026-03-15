@@ -8,48 +8,12 @@ import useJobListContext from "../context/JobListContext";
 
 const JobsList = () => {
     const {data, loading, error, handleDelete, jobsList, setJobsList, search, setSearch} = useJobListContext();
-//   const [jobsList, setJobsList] = useState([]);
-//   const [search, setSearch] = useState("");
-
-//   const url =
-//     search.trim() === ""
-//       ? `http://localhost:3000/jobs`
-//       : `http://localhost:3000/jobs/search/${search}`;
-
-//   const { data, loading, error } = useFetch(url);
-//   console.log(data);
-//   console.log(data.Jobs);
-
-//   useEffect(() => {
-//     if (data && data.Jobs) {
-//       setJobsList(data.Jobs);
-//     }
-//   }, [data, url]);
-
-//   const handleDelete = async (id) => {
-//     const filteredJobs = jobsList.filter((job) => job._id != id);
-//     setJobsList(filteredJobs);
-
-//     try {
-//       const response = await fetch(`http://localhost:3000/jobs/${id}`, {
-//         method: "DELETE",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       });
-
-//       const deletedJob = await response.json();
-//       console.log(deletedJob);
-//     } catch {}
-//   };
-
 
   return  <div className="d-flex flex-column min-vh-100">
             <Header search = {search} setSearch = {setSearch}/>
 
     <div className="container mb-5 flex-grow-1">
 
-        {/* <Header search = {search} setSearch = {setSearch}/> */}
         <h1>All Jobs</h1>
 
         {loading && (
@@ -69,7 +33,7 @@ const JobsList = () => {
                   </div>
                 </div>
               )}
-        {error && <p>Error...</p>}
+        {!loading && error && <p>Error...</p>}
 
         {!loading && jobsList  && jobsList.length > 0 ?
 

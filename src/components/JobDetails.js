@@ -7,17 +7,10 @@ import useJobDetailContext from "../context/JobDetailContext";
 const JobDetails = () => {
     const {data, loading, error, jobId} = useJobDetailContext();
 
-    // const param = useParams();
-    // const jobId = param.jobId
-    // console.log(param)
-    // const {data, loading, error} = useFetch(`http://localhost:3000/jobs/${jobId}`)
-    // console.log(data)
-
     return <div className="d-flex flex-column min-vh-100">
                 <HeaderWithoutSearch/>
 
         <div className="container mb-5 flex-grow-1">
-        {/* <HeaderWithoutSearch/> */}
 
        {loading && (
                 <div
